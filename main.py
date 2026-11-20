@@ -29,7 +29,7 @@ query_result = collection.query(
 print("QUERIES\n")
 for doc_id, doc_text in zip(query_result['ids'], query_result['documents']):
     print(f"Document ID: {doc_id}, Document: {doc_text}\n")
-
+# ps: sigo intentando hacer el print separado (para que por query separe los 3 resultados)
 
 # las nuevas (ai generated ngl)
 new_sentences = []
@@ -43,7 +43,7 @@ collection.add(ids=new_ids, documents=new_sentences)
 
 query_result = collection.query(
     query_texts=[
-        "Why does indoor greenery wither?",
+        "Why do houseplants die?",
         "Which creatures and natural materials help a backyard flourish?"
     ],
     n_results=3
